@@ -130,7 +130,7 @@ export function SiteHeader() {
 
               {/* Footer with branding */}
               <div className="border-t border-border/40 px-4 py-3 bg-muted/30">
-                <p className="text-xs text-muted-foreground text-center">© 2026 Rasel Shikdar</p>
+                <p className="text-xs text-muted-foreground text-center">...</p>
               </div>
             </div>
           </div>
