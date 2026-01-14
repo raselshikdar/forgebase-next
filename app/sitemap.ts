@@ -13,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Get all active products
   const { data: products } = await supabase.from("products").select("slug, updated_at").eq("active", true)
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rasel.dev"
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://raselsh.vercel.app"
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 1 },
