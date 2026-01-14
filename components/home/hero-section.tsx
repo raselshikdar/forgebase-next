@@ -32,7 +32,7 @@ export function HeroSection() {
               {/* Status badge */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-primary text-primary-foreground text-sm font-medium rounded-full shadow-lg flex items-center gap-1.5">
                 <Sparkles className="h-3.5 w-3.5" />
-                Available for work
+                Available
               </div>
             </div>
           </div>
