@@ -96,42 +96,43 @@ export function SiteHeader() {
       </div>
 
       {mobileOpen && (
-        <>
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 top-[57px] bg-background/80 backdrop-blur-sm md:hidden z-40"
-            onClick={() => setMobileOpen(false)}
-          />
+  <>
+    {/* Backdrop — scroll করলে নিচের লেখা ঢাকার জন্য */}
+    <div
+      className="fixed inset-0 top-[57px] md:hidden z-40
+                 bg-background/95 backdrop-blur-xl"
+      onClick={() => setMobileOpen(false)}
+    />
 
-          {/* Menu */}
-          <div className="fixed inset-x-0 top-[57px] md:hidden z-50 animate-in slide-in-from-top-2 duration-200">
-            <div className="mx-4 mt-2 rounded-2xl border border-border/40 bg-background/70 backdrop-blur-xl shadow-xl overflow-hidden">
-              <div className="p-2">
-                {navItems.map((item) => {
-                  const active = isActive(item.href)
-                  return (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      className={cn(
-                        "flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium transition-all duration-200",
-                        active
-  ? "bg-primary/15 text-foreground shadow-sm"
-  : "text-foreground hover:bg-primary/10 active:scale-[0.98]",
-                      )}
-                    >
-                      <span className="flex-1">{item.name}</span>
-                      {active && <ChevronRight className="h-4 w-4 opacity-60" />}
-                    </Link>
-                  )
-                })}
-              </div>
-
-            </div>
-          </div>
-        </>
-      )}
+    {/* Menu */}
+    <div className="fixed inset-x-0 top-[57px] md:hidden z-50 animate-in slide-in-from-top-2 duration-200">
+      <div className="mx-4 mt-2 rounded-2xl border border-border/40
+                      bg-background shadow-xl overflow-hidden">
+        <div className="p-2">
+          {navItems.map((item) => {
+            const active = isActive(item.href)
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className={cn(
+                  "flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium transition-all duration-200",
+                  active
+                    ? "bg-primary/15 text-foreground shadow-sm"
+                    : "text-foreground hover:bg-primary/10 active:scale-[0.98]",
+                )}
+              >
+                <span className="flex-1">{item.name}</span>
+                {active && <ChevronRight className="h-4 w-4 opacity-60" />}
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  </>
+)}
     </header>
   )
 }
