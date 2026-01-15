@@ -2,23 +2,18 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Github, Linkedin, Twitter, Images, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { HeroParticlesBg } from "@/components/home/hero-particles-bg"
 
 export function HeroSection() {
   return (
     <section className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
 
-      {/* Particles background */}
-      <HeroParticlesBg />
+  {/* Web effect background (ONLY ONE background) */}
+  <div className="absolute inset-0 -z-10 overflow-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.25),transparent_40%),radial-gradient(circle_at_80%_60%,rgba(14,165,233,0.22),transparent_40%)] animate-pulse" />
+  </div>
 
-      {/* Background gradient */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      </div>
-
-      {/* Main content container (ONLY ONE) */}
-      <div className="relative z-10 container mx-auto px-6">
+  {/* Main content container */}
+  <div className="relative z-10 container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="relative flex-shrink-0 order-1 lg:order-2">
             <div className="relative">
