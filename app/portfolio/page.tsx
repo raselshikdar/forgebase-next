@@ -30,7 +30,7 @@ export default async function PortfolioPage() {
 
       <main className="mx-auto max-w-5xl px-6 pt-14 md:pt-16 pb-16 animate-fade-in">
         {/* Page Header - Consistent typography */}
-        <div className="mb-12">
+        <div className="mt-8 md:mt-12 mb-12">
           <p className="text-primary font-mono text-sm mb-2">All Projects</p>
           <h1 className="page-title">Portfolio</h1>
           <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
