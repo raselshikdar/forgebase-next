@@ -25,7 +25,7 @@ export function HeroSection() {
               {/* Decorative ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-primary/10 blur-md scale-105" />
               {/* Profile photo container */}
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-background shadow-2xl ring-2 ring-primary/20">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-background shadow-2xl ring-4 ring-primary/30">
                 <Image
                   src="/professional-developer-portrait-photo.jpg"
                   alt="Rasel Shikdar"
