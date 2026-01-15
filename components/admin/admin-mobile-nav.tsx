@@ -3,13 +3,15 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { LayoutDashboard, FileText, FolderKanban, ShoppingBag, Settings, Home } from "lucide-react"
+import { LayoutDashboard, FileText, FolderKanban, ShoppingBag, GalleryVertical, MessageSquare, Settings, Home } from "lucide-react"
 
 const navigation = [
   { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
   { name: "Blog Posts", href: "/admin/blogs", icon: FileText },
   { name: "Projects", href: "/admin/projects", icon: FolderKanban },
   { name: "Products", href: "/admin/products", icon: ShoppingBag },
+  { name: "Gallery", href: "/admin/gallery", icon: GalleryVertical },
+  { name: "Comments", href: "/admin/comments", icon: MessageSquare },
   { name: "Settings", href: "/admin/settings", icon: Settings },
 ]
 
