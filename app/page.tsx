@@ -122,7 +122,7 @@ export default async function HomePage() {
 
       <SiteFooter />
 
-            {*/ <BackToTop /> */}
+            {/* <BackToTop /> */}
     </div>
   )
 }
