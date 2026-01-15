@@ -64,7 +64,7 @@ export function HeroSection() {
             {/* Social links */}
             <div className="mt-6 flex items-center justify-center lg:justify-start gap-3">
               <a
-                href="https://github.com/raselverse"
+                href="https://github.com/raselshikdar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-muted hover:bg-primary/15 hover:text-primary transition-all duration-200"
@@ -73,7 +73,7 @@ export function HeroSection() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/raselshikdar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-muted hover:bg-primary/15 hover:text-primary transition-all duration-200"
@@ -82,7 +82,7 @@ export function HeroSection() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/raselshikdar_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-muted hover:bg-primary/15 hover:text-primary transition-all duration-200"
