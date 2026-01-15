@@ -2,9 +2,9 @@ import Link from "next/link"
 import { Github, Linkedin, Twitter, Mail } from "lucide-react"
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/raselverse", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter },
+  { name: "GitHub", href: "https://github.com/raselshikdar", icon: Github },
+  { name: "LinkedIn", href: "https://linkedin.com/in/raselshikdar", icon: Linkedin },
+  { name: "Twitter", href: "https://twitter.com/raselshikdar_", icon: Twitter },
   { name: "Email", href: "mailto:raselshikdar597@gmail.com", icon: Mail },
 ]
 
@@ -46,23 +46,28 @@ export function SiteFooter() {
           </nav>
 
           {/* Social Links */}
-          <div className="flex items-center gap-3">
-            {socialLinks.map((link) => {
-              const Icon = link.icon
-              return (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  aria-label={link.name}
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              )
-            })}
-          </div>
+<div className="flex items-center gap-2">
+  {socialLinks.map((link) => {
+    const Icon = link.icon
+    return (
+      <a
+        key={link.name}
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={link.name}
+        className="
+          p-2 rounded-full
+          text-muted-foreground
+          hover:bg-primary/10 hover:text-primary
+          transition-colors
+        "
+      >
+        <Icon className="h-4 w-4" />
+      </a>
+    )
+  })}
+</div>
         </div>
 
         <div className="mt-6 pt-4 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-2">
