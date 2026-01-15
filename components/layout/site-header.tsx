@@ -128,10 +128,6 @@ export function SiteHeader() {
                 })}
               </div>
 
-              {/* Footer with branding */}
-              <div className="border-t border-border/40 px-4 py-3 bg-background/50 backdrop-blur">
-                <p className="text-xs text-muted-foreground text-center">...</p>
-              </div>
             </div>
           </div>
         </>
