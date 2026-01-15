@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { createClient } from "@/lib/supabase/server"
 import type { Project } from "@/lib/types"
+import { SiteHeader } from "@/components/layout/site-header"
+import { SiteFooter } from "@/components/layout/site-footer"
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -24,19 +26,6 @@ export default async function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-4">
-            <Link href="/" className="text-lg font-bold tracking-tight">
-              rasel<span className="text-primary">.</span>
-            </Link>
-            <span className="text-border">/</span>
-            <span className="text-sm text-muted-foreground">portfolio</span>
-          </div>
-          <ThemeToggle />
-        </div>
-      </header>
 
       <main className="mx-auto max-w-5xl px-6 py-16 animate-fade-in">
         {/* Page Header - Consistent typography */}
@@ -142,14 +131,14 @@ export default async function PortfolioPage() {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border/40 py-8">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-            Back to Home
-          </Link>
-        </div>
-      </footer>
-    </div>
+      <div className="min-h-screen bg-background">
+  <SiteHeader />
+
+  <main className="mx-auto max-w-5xl px-6 py-16 animate-fade-in">
+    {/* portfolio content */}
+  </main>
+
+  <SiteFooter />
+</div>
   )
 }
