@@ -38,13 +38,7 @@ export default async function GalleryPage() {
         <div className="container mx-auto px-6">
           {/* Page Header */}
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Link>
+            
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">My Gallery</h1>
             <p className="text-lg text-muted-foreground">
               A personal collection of photos, videos, audio, thoughts, and more.
