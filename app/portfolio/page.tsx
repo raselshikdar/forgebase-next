@@ -26,6 +26,8 @@ export default async function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Global Header (with mobile menu) */}
+      <SiteHeader />
 
       <main className="mx-auto max-w-5xl px-6 py-16 animate-fade-in">
         {/* Page Header - Consistent typography */}
@@ -131,14 +133,8 @@ export default async function PortfolioPage() {
         )}
       </main>
 
-      <div className="min-h-screen bg-background">
-  <SiteHeader />
-
-  <main className="mx-auto max-w-5xl px-6 py-16 animate-fade-in">
-    {/* portfolio content */}
-  </main>
-
-  <SiteFooter />
+      {/* Global Footer */}
+      <SiteFooter />
 </div>
   )
 }
