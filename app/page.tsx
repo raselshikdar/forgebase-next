@@ -10,7 +10,7 @@ import { StorePreview } from "@/components/home/store-preview"
 import { ContactSection } from "@/components/home/contact-section"
 import { SiteHeader } from "@/components/layout/site-header"
 import { SiteFooter } from "@/components/layout/site-footer"
-import { BackToTop } from "@/components/ui/back-to-top"
+// import { BackToTop } from "@/components/ui/back-to-top"
 
 export const revalidate = 60 // Revalidate every 60 seconds
 
@@ -122,7 +122,7 @@ export default async function HomePage() {
 
       <SiteFooter />
 
-      <BackToTop />
+            {*/ <BackToTop /> */}
     </div>
   )
 }
