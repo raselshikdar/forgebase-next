@@ -28,16 +28,16 @@ export default async function PortfolioPage() {
       {/* Global Header (with mobile menu) */}
       <SiteHeader />
 
-      <main className="mx-auto max-w-5xl px-6 pt-14 md:pt-16 pb-16 animate-fade-in">
-        {/* Page Header - Consistent typography */}
-        <div className="mt-8 md:mt-12 mb-12">
-          <p className="text-primary font-mono text-sm mb-2">All Projects</p>
-          <h1 className="page-title">Portfolio</h1>
-          <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-            A collection of projects I've built over the years. Each one represents a unique challenge and learning
-            experience.
-          </p>
-        </div>
+      <main className="mx-auto max-w-5xl px-6 pt-14 md:pt-16 pb-16">
+  {/* Hero spacing */}
+  <div className="mt-10 md:mt-16">
+    <p className="text-primary font-mono text-sm mb-2">All Projects</p>
+    <h1 className="page-title">Portfolio</h1>
+    <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
+      A collection of projects I've built over the years. Each one represents a unique challenge and learning
+      experience.
+    </p>
+  </div>
 
         {/* Projects Table */}
         {projects.length > 0 ? (
