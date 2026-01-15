@@ -9,26 +9,30 @@ export function HeroWebBg() {
 
   useEffect(() => {
     if (!ref.current) return
-    if (window.innerWidth < 768) return // mobile skip
+    if (!theme) return
 
     let effect: any
 
-    const loadVanta = async () => {
+    const init = async () => {
       const THREE = await import("three")
-      const NET = (await import("vanta/dist/vanta.net.min")).default
+      const NET = (await import("vanta/dist/vanta.net")).default
+
+      const isMobile = window.innerWidth < 768
 
       effect = NET({
         el: ref.current!,
         THREE,
         color: theme === "dark" ? 0x6366f1 : 0x4f46e5,
         backgroundColor: theme === "dark" ? 0x0b0b0b : 0xffffff,
-        points: 8,
-        spacing: 24,
-        maxDistance: 22,
+
+        // 🔽 Mobile-friendly settings
+        points: isMobile ? 5 : 8,
+        spacing: isMobile ? 30 : 24,
+        maxDistance: isMobile ? 18 : 22,
       })
     }
 
-    loadVanta()
+    init()
 
     return () => {
       if (effect) effect.destroy()
