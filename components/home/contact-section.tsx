@@ -1,11 +1,13 @@
 import Link from "next/link"
-import { Mail, Github, Linkedin, Twitter, ArrowRight } from "lucide-react"
+import { Mail, Github, Facebook, Twitter, Linkedin, Send, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/raselverse", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter },
+  { name: "GitHub", href: "https://github.com/raselshikdar", icon: Github },
+  { name: "Facebook", href: "https://facebook.com/raselverse", icon: Facebook },
+  { name: "X", href: "https://x.com/raselshikdar_", icon: Twitter },
+  { name: "LinkedIn", href: "https://linkedin.com/in/raselshikdar", icon: Linkedin },
+  { name: "Telegram", href: "https://t.me/rasel597", icon: Send },
 ]
 
 export function ContactSection() {
