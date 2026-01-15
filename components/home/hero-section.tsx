@@ -9,10 +9,9 @@ export function HeroSection() {
 
   {/* Web effect background (ONLY ONE background) */}
   <div
-  className="absolute inset-0 -z-10"
+  className="absolute inset-0 z-0"
   style={{
-    background:
-      "radial-gradient(circle at 20% 20%, rgba(99,102,241,0.35), transparent 40%), radial-gradient(circle at 80% 60%, rgba(14,165,233,0.30), transparent 40%)",
+    backgroundColor: "rgba(255,0,0,0.35)",
   }}
 />
 
