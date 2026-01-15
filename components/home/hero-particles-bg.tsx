@@ -3,36 +3,36 @@
 import { useEffect, useState } from "react"
 import Particles from "@tsparticles/react"
 import { loadSlim } from "@tsparticles/slim"
-import type { Engine } from "@tsparticles/engine"
 import { useTheme } from "next-themes"
 
 export function HeroParticlesBg() {
-  const { theme } = useTheme()
-  const [ready, setReady] = useState(false)
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    loadSlim({} as Engine).then(() => setReady(true))
+    setMounted(true)
   }, [])
 
-  if (!ready) return null
+  if (!mounted || !resolvedTheme) return null
+
+  const isDark = resolvedTheme === "dark"
 
   return (
     <Particles
-      className="absolute inset-0 -z-10"
+      className="absolute inset-0 z-0"
+      init={async (engine) => {
+        await loadSlim(engine)
+      }}
       options={{
-        fullScreen: false,
-        background: {
-          color: {
-            value: theme === "dark" ? "#0b0b0b" : "#ffffff",
-          },
-        },
+        fullScreen: { enable: false },
+        background: { color: { value: "transparent" } },
         particles: {
-          number: { value: 45 },
-          color: { value: theme === "dark" ? "#6366f1" : "#4f46e5" },
+          number: { value: 35 },
+          color: { value: isDark ? "#6366f1" : "#4f46e5" },
           links: {
             enable: true,
-            color: theme === "dark" ? "#6366f1" : "#4f46e5",
-            distance: 120,
+            distance: 140,
+            color: isDark ? "#6366f1" : "#4f46e5",
             opacity: 0.4,
           },
           move: { enable: true, speed: 1 },
