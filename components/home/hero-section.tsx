@@ -6,17 +6,19 @@ import { HeroParticlesBg } from "@/components/home/hero-particles-bg"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[85vh] flex items-center pt-20">
+    <section className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
+
+      {/* Particles background */}
       <HeroParticlesBg />
 
-  <div className="relative z-10 container mx-auto px-6">
-      {/* Background gradient - optimized */}
+      {/* Background gradient */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6">
+      {/* Main content container (ONLY ONE) */}
+      <div className="relative z-10 container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="relative flex-shrink-0 order-1 lg:order-2">
             <div className="relative">
