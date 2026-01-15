@@ -143,7 +143,7 @@ export function SkillsSection() {
               </div>
               <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Daily Tools</span>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:flex md:flex-wrap gap-2">
               {dailyTools.map((tool) => {
   const Icon = dailyToolIcons[tool]
 
