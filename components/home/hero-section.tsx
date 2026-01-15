@@ -8,9 +8,13 @@ export function HeroSection() {
     <section className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
 
   {/* Web effect background (ONLY ONE background) */}
-  <div className="absolute inset-0 -z-10 overflow-hidden">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.25),transparent_40%),radial-gradient(circle_at_80%_60%,rgba(14,165,233,0.22),transparent_40%)] animate-pulse" />
-  </div>
+  <div
+  className="absolute inset-0 -z-10"
+  style={{
+    background:
+      "radial-gradient(circle at 20% 20%, rgba(99,102,241,0.35), transparent 40%), radial-gradient(circle at 80% 60%, rgba(14,165,233,0.30), transparent 40%)",
+  }}
+/>
 
   {/* Main content container */}
   <div className="relative z-10 container mx-auto px-6">
