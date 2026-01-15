@@ -7,18 +7,11 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
 
-  {/* Web effect background (ONLY ONE background) */}
-  <div
-  className="absolute inset-0 z-0"
-  style={{
-    background: `
-      radial-gradient(circle at 15% 20%, rgba(99,102,241,0.55), transparent 35%),
-      radial-gradient(circle at 85% 60%, rgba(14,165,233,0.45), transparent 35%),
-      linear-gradient(120deg, rgba(99,102,241,0.15), rgba(14,165,233,0.15))
-    `,
-    animation: "pulseBg 6s ease-in-out infinite",
-  }}
-/>
+  {/* Soft animated background */}
+<div className="absolute inset-0 -z-10 overflow-hidden">
+  <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-indigo-500/25 rounded-full blur-[120px] animate-[pulseBg_16s_ease-in-out_infinite]" />
+  <div className="absolute bottom-[-200px] right-[-200px] w-[700px] h-[700px] bg-sky-400/25 rounded-full blur-[140px] animate-[pulseBg_20s_ease-in-out_infinite]" />
+</div>
 
   {/* Main content container */}
   <div className="relative z-10 container mx-auto px-6">
