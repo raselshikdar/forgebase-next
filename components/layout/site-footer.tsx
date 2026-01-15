@@ -18,7 +18,8 @@ const quickLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/40 bg-muted/30 backdrop-blur">
+    <footer className="relative border-t border-border/40 bg-muted/30 backdrop-blur">
+<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.12),transparent_60%)]" />
       <div className="container mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
