@@ -37,7 +37,7 @@ export default async function GalleryPage() {
       <main className="pt-[88px] md:pt-[96px] pb-16">
         <div className="container mx-auto px-6">
           {/* Page Header */}
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mt-8 md:mt-12 mb-16">
             
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">My Gallery</h1>
             <p className="text-lg text-muted-foreground">
