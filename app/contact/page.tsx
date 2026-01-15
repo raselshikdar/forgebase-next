@@ -52,7 +52,7 @@ export default function ContactPage() {
                         href="mailto:hello@rasel.dev"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        hello@rasel.dev
+                        info@raselsh.site
                       </a>
                     </div>
                   </div>
