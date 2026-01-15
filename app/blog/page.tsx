@@ -61,7 +61,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      <main className="pt-14 md:pt-18 animate-fade-in">
+      <main className="pt-14 md:pt-16 animate-fade-in">
         {/* Hero Section */}
         <section className="py-16 bg-card/30 border-b border-border/40">
           <div className="container mx-auto px-6">
