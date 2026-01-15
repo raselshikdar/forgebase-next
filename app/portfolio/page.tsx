@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { createClient } from "@/lib/supabase/server"
 import type { Project } from "@/lib/types"
 import { SiteHeader } from "@/components/layout/site-header"
@@ -29,7 +28,7 @@ export default async function PortfolioPage() {
       {/* Global Header (with mobile menu) */}
       <SiteHeader />
 
-      <main className="mx-auto max-w-5xl px-6 py-16 animate-fade-in">
+      <main className="mx-auto max-w-5xl px-6 py-24 animate-fade-in">
         {/* Page Header - Consistent typography */}
         <div className="mb-12">
           <p className="text-primary font-mono text-sm mb-2">All Projects</p>
