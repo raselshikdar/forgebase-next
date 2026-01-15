@@ -67,7 +67,7 @@ export function HeroSection() {
                 href="https://github.com/raselverse"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-full bg-muted hover:bg-primary/10 hover:text-primary transition-all duration-200"
+                className="p-2.5 rounded-full bg-muted hover:bg-primary/15 hover:text-primary transition-all duration-200"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -76,7 +76,7 @@ export function HeroSection() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-full bg-muted hover:bg-primary/10 hover:text-primary transition-all duration-200"
+                className="p-2.5 rounded-full bg-muted hover:bg-primary/15 hover:text-primary transition-all duration-200"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -85,7 +85,7 @@ export function HeroSection() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-full bg-muted hover:bg-primary/10 hover:text-primary transition-all duration-200"
+                className="p-2.5 rounded-full bg-muted hover:bg-primary/15 hover:text-primary transition-all duration-200"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
