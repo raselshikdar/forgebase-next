@@ -11,7 +11,12 @@ export function HeroSection() {
   <div
   className="absolute inset-0 z-0"
   style={{
-    backgroundColor: "rgba(255,0,0,0.35)",
+    background: `
+      radial-gradient(circle at 15% 20%, rgba(99,102,241,0.55), transparent 35%),
+      radial-gradient(circle at 85% 60%, rgba(14,165,233,0.45), transparent 35%),
+      linear-gradient(120deg, rgba(99,102,241,0.15), rgba(14,165,233,0.15))
+    `,
+    animation: "pulseBg 6s ease-in-out infinite",
   }}
 />
 
