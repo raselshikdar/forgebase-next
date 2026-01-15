@@ -15,7 +15,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      <main className="pt-16 md:pt-20">
+      <main className="pt-14 md:pt-16">
         {/* Hero Section */}
         <section className="border-b border-border/40 py-16 md:py-20">
           <div className="mx-auto max-w-6xl px-4">
