@@ -38,24 +38,24 @@ export async function submitContactMessage(input: ContactMessageInput): Promise<
 
     try {
       const emailResponse = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "default_service",
-          template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "default_template",
-          user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "default_key",
-          template_params: {
-            to_email: "raselshikdar597@gmail.com",
-            from_name: input.name,
-            from_email: input.email,
-            subject: input.subject,
-            message: input.message,
-            reply_to_email: input.email,
-          },
-        }),
-      })
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${process.env.EMAILJS_PRIVATE_KEY}`,
+  },
+  body: JSON.stringify({
+    service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+    template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+    template_params: {
+      to_email: "raselshikdar597@gmail.com",
+      from_name: input.name,
+      from_email: input.email,
+      subject: input.subject,
+      message: input.message,
+      reply_to_email: input.email,
+    },
+  }),
+})
 
       if (!emailResponse.ok) {
         console.warn("EmailJS service warning:", emailResponse.statusText)
@@ -129,23 +129,23 @@ export async function replyToMessage(messageId: string, replyMessage: string) {
     // Send reply email
     try {
       const emailResponse = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "default_service",
-          template_id: process.env.NEXT_PUBLIC_EMAILJS_REPLY_TEMPLATE_ID || "default_template",
-          user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "default_key",
-          template_params: {
-            to_email: message.email,
-            from_name: "Rasel Shikdar",
-            subject: "Re: Your Message",
-            message: replyMessage,
-            reply_to_email: "raselshikdar597@gmail.com",
-          },
-        }),
-      })
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${process.env.EMAILJS_PRIVATE_KEY}`,
+  },
+  body: JSON.stringify({
+    service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+    template_id: process.env.NEXT_PUBLIC_EMAILJS_REPLY_TEMPLATE_ID,
+    template_params: {
+      to_email: message.email,
+      from_name: "Rasel Shikdar",
+      subject: "Re: Your Message",
+      message: replyMessage,
+      reply_to_email: "raselshikdar597@gmail.com",
+    },
+  }),
+})
 
       if (!emailResponse.ok) {
         console.warn("Reply email service warning:", emailResponse.statusText)
