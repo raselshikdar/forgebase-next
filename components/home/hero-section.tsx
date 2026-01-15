@@ -7,13 +7,17 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
 
-  {/* Soft animated background */}
-<div className="absolute inset-0 -z-10 overflow-hidden">
-  <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-indigo-500/25 rounded-full blur-[120px] animate-[pulseBg_16s_ease-in-out_infinite]" />
-  <div className="absolute bottom-[-200px] right-[-200px] w-[700px] h-[700px] bg-sky-400/25 rounded-full blur-[140px] animate-[pulseBg_20s_ease-in-out_infinite]" />
-</div>
+  {/* Animated hero background – guaranteed visible */}
+  <div
+    className="absolute inset-0 -z-10"
+    style={{
+      background:
+        "radial-gradient(circle at 20% 20%, rgba(99,102,241,0.35), transparent 40%), radial-gradient(circle at 80% 60%, rgba(14,165,233,0.30), transparent 40%)",
+      animation: "pulseBg 18s ease-in-out infinite",
+    }}
+  />
 
-  {/* Main content container */}
+  {/* Main content */}
   <div className="relative z-10 container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="relative flex-shrink-0 order-1 lg:order-2">
