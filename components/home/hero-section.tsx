@@ -8,6 +8,8 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[85vh] flex items-center pt-20">
       <HeroParticlesBg />
+
+  <div className="relative z-10 container mx-auto px-6">
       {/* Background gradient - optimized */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
