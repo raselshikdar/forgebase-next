@@ -138,7 +138,3 @@
     opacity: 0.75;
   }
 }
-/* Triangle clip shape */
-.clip-triangle {
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-}
