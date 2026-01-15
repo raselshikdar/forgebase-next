@@ -1,4 +1,20 @@
-import { Code2, Server, Database, Cloud, Wrench } from "lucide-react"
+import {
+  Code2,
+  Server,
+  Database,
+  Cloud,
+  Wrench,
+  GitBranch,
+  Github,
+  Code,
+  Zap,
+  PenTool,
+  TestTube,
+  Send,
+  Smartphone,
+  Terminal,
+  Package,
+} from "lucide-react"
 
 const skillDomains = [
   {
@@ -40,6 +56,18 @@ const skillDomains = [
 ]
 
 const dailyTools = ["Git", "GitHub", "VS Code", "Vite", "Figma", "Jest", "Postman", "React Native", "Linux", "npm"]
+const dailyToolIcons: Record<string, any> = {
+  Git: GitBranch,
+  GitHub: Github,
+  "VS Code": Code,
+  Vite: Zap,
+  Figma: PenTool,
+  Jest: TestTube,
+  Postman: Send,
+  "React Native": Smartphone,
+  Linux: Terminal,
+  npm: Package,
+}
 
 function getStrengthColor(strength: string): string {
   switch (strength) {
@@ -116,14 +144,19 @@ export function SkillsSection() {
               <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Daily Tools</span>
             </div>
             <div className="flex flex-wrap gap-2">
-              {dailyTools.map((tool) => (
-                <span
-                  key={tool}
-                  className="px-2.5 py-1 text-xs font-medium rounded-md bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
-                >
-                  {tool}
-                </span>
-              ))}
+              {dailyTools.map((tool) => {
+  const Icon = dailyToolIcons[tool]
+
+  return (
+    <span
+      key={tool}
+      className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-md bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+    >
+      {Icon && <Icon className="h-3.5 w-3.5 opacity-70" />}
+      {tool}
+    </span>
+  )
+})}
             </div>
           </div>
         </div>
