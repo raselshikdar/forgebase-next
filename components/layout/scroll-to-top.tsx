@@ -16,19 +16,20 @@ export function ScrollToTop() {
   }, [])
 
   return (
-    <button
-      aria-label="Scroll to top"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className={cn(
-        "fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full",
-        "bg-primary text-primary-foreground shadow-lg backdrop-blur",
-        "transition-all duration-300 hover:scale-110 hover:shadow-xl",
-        visible
-          ? "translate-y-0 opacity-100"
-          : "pointer-events-none translate-y-16 opacity-0",
-      )}
-    >
-      <ArrowUp className="h-5 w-5" />
-    </button>
+    <Button
+  size="icon"
+  onClick={scrollToTop}
+  aria-label="Scroll to top"
+  className={cn(
+    "fixed bottom-6 right-6 z-50 rounded-full",
+    "bg-foreground text-background",
+    "shadow-lg hover:shadow-xl",
+    "transition-all duration-300",
+    "hover:scale-110 active:scale-95",
+    isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0",
+  )}
+>
+  <ArrowUp className="h-4 w-4" />
+</Button>
   )
 }
