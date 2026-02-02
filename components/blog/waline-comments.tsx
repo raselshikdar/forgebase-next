@@ -20,7 +20,7 @@ export function WalineComments() {
 
       init({
         el: containerRef.current,
-        serverURL: "https://raselverse-waline.vercel.app/",
+        serverURL: "https://waline-neon.vercel.app/",
         dark: resolvedTheme === "dark",
         meta: ["nick", "mail"],
         requiredMeta: ["nick"],
